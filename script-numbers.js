@@ -12,7 +12,7 @@ function onClick(e) {
 
   // setup URL
   // The cslone.byu.edu forwards to the numbers API but converts it to https
-  let url = "https://csonline.byu.edu/numbers/" + number + "/" + "type" + "?json";
+  let url = "https://csonline.byu.edu/numbers/" + number + "/" + type + "?json";
   // call API
   fetch(url)
     .then(function(response) {
@@ -30,7 +30,7 @@ function onClick(e) {
 }
 
 function updateResult(info) {
-  document.getElementById('results').textContent = info;
+  document.getElementById('result').textContent = info;
 }
 
 document.getElementById('woo').addEventListener('click', onClick);
